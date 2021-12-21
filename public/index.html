@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <script>
+
+    // //function to remove username and token from
+    // //local storage and sends user to login page.
+    // async function logoutUser() {
+    //   localStorage.removeItem('username')
+    //   localStorage.removeItem('token')
+    //   location = '/login.html'
+    // }
+
+    // //function retrieving posts from backend database
+    // async function getPosts() {
+    //   try {
+    //     const { data: posts } = await axios.get('/api/posts', {
+    //       headers: {
+    //         'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //       }
+    //     })
+    //     return posts
+
+    //   } catch (err) {
+    //     location = '/login.html'
+    //   }
+    // }
+
+    // //function to create a singular post and storing
+    // //in the backend.
+    // async function createPost(data) {
+    //   const { data: post } = await axios.post('/api/posts', data, {
+    //     headers: {
+    //       'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //     }
+    //   })
+
+    //   return post
+    // }
+
+    // //function to render a singular post by the user.
+    // async function renderPost({ title, body, User: { username } }) {
+    //   const postElem = document.createElement('div')
+    //   postElem.innerHTML = `
+    //       <div class="row bg-light p-5 rounded-md mb-2 mt-2">
+    //         <h3>${title}</h3>
+    //         <p class="lead"><i>posted by ${username}</i></p>
+    //         <p class="lead">${body}</p>
+    //         <hr class="my-4">
+    //       </div>
+    //     `
+    //   document.getElementById('posts').prepend(postElem)
+    // }
+
+    // //function to render each post in the database.
+    // async function renderPosts() {
+    //   const posts = await getPosts()
+
+    //   posts.forEach(post => renderPost(post))
+    // }
+
+    // //function renders user's username after retrieving
+    // //from localstorage.
+    // async function renderUsername() {
+    //   const username = localStorage.getItem('username')
+
+    //   document.getElementById('username').textContent = username
+    // }
+
+    // //eventlistener
+    // document.getElementById('post').addEventListener('click', async function (event) {
+    //   event.preventDefault()
+
+    //   const post = await createPost({
+    //     title: document.getElementById('title').value,
+    //     body: document.getElementById('body').value
+    //   })
+
+    //   renderPost({ ...post, User: { username: localStorage.getItem('username') } })
+    // })
+
+    // document.getElementById('logout').addEventListener('click', logoutUser)
+
+    // renderPosts()
+    // renderUsername()
+  </script>
+</body>
+
+</html>
