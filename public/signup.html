@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/public/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+
+
+    <form>
+        <div class="grid-container">
+          <div class="grid-padding-x">
+            <div class="medium-6 cell">
+              <label>username:
+                <input type="text" placeholder="enter username" id="rUsername">
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>password
+                <input type="text" placeholder="enter password" id="rPassword">
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>email:
+                <input type="text" placeholder="enter email" id="rEmail">
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>first name:
+                <input type="text" placeholder="enter first name" id="rFirstname">
+              </label>
+            </div>
+            <div class="medium-6 cell">
+              <label>last name:
+                <input type="text" placeholder="enter last name" id="rLastname">
+              </label>
+            </div>
+          </div>
+          <button type="button" class="alert button" id="submitBtn">Submit</button>
+        </div>
+      </form>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <script>
+    async function registerUser(user) {
+        try {
+          await axios.post('/api/users/register', user)
+          return true
+  
+        } catch (err) {
+          alert('Invalid Info Provided. Please Try Again.')
+        }
+      }
+
+    document.getElementById('submitBtn').addEventListener('click', async function (event) {
+      event.preventDefault()
+
+      const isCreated = await registerUser({
+        username: document.getElementById('rUsername').value,
+        password: document.getElementById('rPassword').value,
+        email: document.getElementById('rEmail').value,
+        firstname: document.getElementById('rFirstname'),
+        lastname: document.getElementById('rLastname')
+      })
+
+      if (isCreated) {
+        alert('Account Created! Please Login.')
+      }
+    })
+
+    </script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
