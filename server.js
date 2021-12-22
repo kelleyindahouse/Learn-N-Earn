@@ -17,21 +17,21 @@ app.use(express.json())
 app.use(passport.initialize())
 app.use(passport.session())
 
-// passport.use(User.createStrategy())
-// passport.serializeUser(User.serializeUser())
-// passport.deserializeUser(User.deserializeUser())
+passport.use(User.createStrategy())
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
-// passport.use(new JWTStrategy({
-//   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-//   secretOrKey: process.env.SECRET
-// }, async function ({ id }, cb) {
-//   try {
-//     const user = await User.findOne({ where: { id }, include: [Post] })
-//     cb(null, user)
-//   } catch (err) {
-//     cb(err, null)
-//   }
-// }))
+passport.use(new JWTStrategy({
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+  secretOrKey: process.env.SECRET
+}, async function ({ id }, cb) {
+  try {
+    const user = await User.findOne({ where: { id }, include: [Post] })
+    cb(null, user)
+  } catch (err) {
+    cb(err, null)
+  }
+}))
 
 app.use(require('./routes'))
 
