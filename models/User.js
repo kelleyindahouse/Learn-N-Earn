@@ -22,9 +22,16 @@ const User = pls.defineUser(sequelize, {
   email: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  firstname: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  lastname: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
 })
 
-console.log(User === sequelize.models.User);
 
 module.exports = User
