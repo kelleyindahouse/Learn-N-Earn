@@ -25,4 +25,6 @@ const User = pls.defineUser(sequelize, {
   }
 })
 
+console.log(User === sequelize.models.User);
+
 module.exports = User

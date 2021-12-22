@@ -1,5 +1,5 @@
-// const router = require('express').Router()
-// const { Post, User, Comment } = require('../models')
+const router = require('express').Router()
+const { Post, User, Comment } = require('../models')
 // const passport = require('passport')
 
 // // GET all posts
@@ -23,4 +23,4 @@
 //   res.sendStatus(200)
 // })
 
-// module.exports = router
+module.exports = router
