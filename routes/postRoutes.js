@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Post, User, Comment } = require('../models')
+const { Post, User } = require('../models')
 const passport = require('passport')
 
 // GET all posts
@@ -9,10 +9,11 @@ router.get('/posts', passport.authenticate('jwt'), async function (req, res) {
 })
 
 // POST one post
-router.post('/posts', passport.authenticate('jwt'), async function ({ body, user }, res) {
+router.post('/posts', passport.authenticate('jwt'), async function (req, res) {
   const post = await Post.create({
-    ...body,
-    uid: user.id
+    body: req.body.body,
+    title: req.body.title,
+    uid: req.user.id
   })
   res.json(post)
 })

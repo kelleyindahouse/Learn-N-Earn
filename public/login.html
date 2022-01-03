@@ -5,70 +5,87 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Learn-N-Earn</title>
   <link rel="stylesheet" href="/public/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="/public/login.css">
 </head>
 
 <body>
   
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu">
+        <li class="menu-text">Learn-N-Earn</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-y" style="height: 30px;"></div>
+
+  <div class="grid-container fluid">
+    <h2 class="text-center">Login</h2><br>
+  </div>
+
+  <form>
+    <div class="grid-container fluid">
+      <div class="grid-x grid-padding-x">
+        <div class="cell medium-4">
+          <label class="text-right middle"><h5>Username:</h5></label>
+        </div>
+        <div class="cell medium-4">
+          <input id="lUsername" type="text" placeholder="Enter your username">
+        </div>
+        <div class="cell medium-4"></div>
+        <div class="cell medium-4">
+          <label class="text-right middle"><h5>Password:</h5></label>
+        </div>
+        <div class="cell medium-4">
+          <input id="lPassword" type="text" placeholder="Enter your password">
+        </div>
+        <div class="cell medium-4"></div>
+        <div class="cell medium-4"></div>
+        <div class="cell medium-4">  
+          <button id="login" class="submit button expanded">Login</button>
+        </div>
+        <div class="cell medium-4"></div>
+      </div>
+    </div>
+  </form>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
     crossorigin="anonymous"></script>
   
   <script>
 
-    // async function registerUser(user) {
-    //   try {
-    //     await axios.post('/api/users/register', user)
-    //     return true
+    const loginUser = () => {
+        let existingUser = {
+          username: document.getElementById('lUsername').value,
+          password: document.getElementById('lPassword').value
+        }
+        axios.post('/api/users/login', existingUser)
+          .then(res => {
+            console.log(res)
+            localStorage.setItem('token', res.data.token)
+            location = '/'
 
-    //   } catch (err) {
-    //     alert('Invalid Info Provided. Please Try Again.')
-    //   }
-    // }
+          })
+      }
 
-    // async function loginUser(user) {
-    //   try {
-    //     const { data } = await axios.post('/api/users/login', user)
-    //     return data
-
-    //   } catch (err) {
-    //     alert('Something Went Wrong. Please Try Again.')
-    //   }
-    // }
-
-    // document.getElementById('register').addEventListener('click', async function (event) {
-    //   event.preventDefault()
-
-    //   const isCreated = await registerUser({
-    //     username: document.getElementById('rUsername').value,
-    //     email: document.getElementById('rEmail').value,
-    //     password: document.getElementById('rPassword').value
-    //   })
-
-    //   if (isCreated) {
-    //     alert('Account Created! Please Login.')
-    //   }
-    // })
-
-    // document.getElementById('login').addEventListener('click', async function (event) {
-    //   event.preventDefault()
-
-    //   const { username, token } = await loginUser({
-    //     username: document.getElementById('lUsername').value,
-    //     password: document.getElementById('lPassword').value
-    //   })
-
-    //   if (token) {
-    //     localStorage.setItem('username', username)
-    //     localStorage.setItem('token', token)
-    //     location = '/'
-    //   } else {
-    //     alert('Invalid Username Or Password. Please Try Again.')
-    //   }
-    // })
+    document.getElementById('login').addEventListener('click', event => {
+      event.preventDefault()
+      loginUser()
+      console.log("success!")
+    })
 
   </script>
 </body>
