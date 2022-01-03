@@ -6,58 +6,80 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="/public/reset.css">
-  <link rel="stylesheet" href="/public/login.css">
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.js"></script>
 </head>
 
 <body>
   
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu">
-        <li class="menu-text">Learn-N-Earn</li>
+  <!-- navbar -->
+  
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+  
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="#">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="#">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="#">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="#">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Register</a></li>
       </ul>
     </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Contact</a></li>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
+  </nav>
+
+  <div class="formContainer uk-container-expand uk-margin-large-top uk-flex uk-flex-center">
+    <h1 class="loginHeader">Login</h1>
   </div>
 
-  <div class="grid-y" style="height: 30px;"></div>
-
-  <div class="grid-container fluid">
-    <h2 class="text-center">Login</h2><br>
-  </div>
-
-  <form>
-    <div class="grid-container fluid">
-      <div class="grid-x grid-padding-x">
-        <div class="cell medium-4">
-          <label class="text-right middle"><h5>Username:</h5></label>
+  <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-background-muted">
+    <form>
+      <div class="uk-container-expand uk-margin-top">
+        <h4>Username:</h4>
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: user"></span>
+          <input id="lUsername" class="uk-input uk-form-width-large" type="text">
         </div>
-        <div class="cell medium-4">
-          <input id="lUsername" type="text" placeholder="Enter your username">
-        </div>
-        <div class="cell medium-4"></div>
-        <div class="cell medium-4">
-          <label class="text-right middle"><h5>Password:</h5></label>
-        </div>
-        <div class="cell medium-4">
-          <input id="lPassword" type="text" placeholder="Enter your password">
-        </div>
-        <div class="cell medium-4"></div>
-        <div class="cell medium-4"></div>
-        <div class="cell medium-4">  
-          <button id="login" class="submit button expanded">Login</button>
-        </div>
-        <div class="cell medium-4"></div>
       </div>
-    </div>
-  </form>
+      <div class="uk-container-expand uk-margin">
+        <h4>Password:</h4>
+        <div class="uk-inline">
+          <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+          <input id="lPassword" class="uk-input uk-form-width-large" type="text">
+        </div>
+      </div>
+      <button id="login" class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-margin-top uk-margin-bottom">Login</button>
+    </form>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   
