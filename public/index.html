@@ -1,20 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/public/reset.css">
-</head>
+  <title>Learn-n-Earn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.js"></script>
 
 <body>
-  
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  
-  <script>
 
+<!-- navbar with mobile hamburger -->
+
+<nav class="uk-navbar uk-navbar-container uk-margin">
+  <div class="uk-navbar-left">
+    <a class="uk-navbar-toggle" href="#">
+      <span uk-navbar-toggle-icon></span> <span class="uk-margin-medium-left">Learn-n-Earn</span>
+    </a>
+  </div>
+</nav>
+
+<br><br>
+
+<!-- campus logo nav to search for students on primary card -->
+
+<div class="uk-child-width-1-4@m" uk-grid>
+  <div>
+    <div class="uk-card-media-left uk-card-default">
+      <div class="uk-card-media-top">
+        <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: scale">
+        
+          <ul class="uk-slideshow-items">
+            <li>
+              <img src="images/berkeley.jpg" alt="" uk-cover>
+              <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">UC Berkeley</h3>
+                <p class="uk-margin-remove">Find students @UC Berkeley</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/ucdavis.jpg" alt="" uk-cover>
+              <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">UC Davis</h3>
+                <p class="uk-margin-remove">Find students @UC Davis!</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/uci.jpg" alt="" uk-cover>
+              <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">UCI</h3>
+                <p class="uk-margin-remove">Find students @UCI!</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/ucla.jpg" alt="" uk-cover>
+              <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">UCLA</h3>
+                <p class="uk-margin-remove">Find students @UCLA!</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/ucmerced.jpg" alt="" uk-cover>
+              <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">UC Merced</h3>
+                <p class="uk-margin-remove">Find students @UC Merced!</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/ucsb.jpg" alt="" uk-cover>
+              <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">UCSB</h3>
+                <p class="uk-margin-remove">Find students @UCSB!</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/ucsd.jpg" alt="" uk-cover>
+              <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">UCSD</h3>
+                <p class="uk-margin-remove">Find students @UCSD!</p>
+              </div>
+            </li>
+          </ul>
+        
+          <div class="uk-light">
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+              uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+              uk-slideshow-item="next"></a>
+          </div>
+        
+        </div>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Need some help?  Select a campus</h3>
+        <p>Choose the campus in your area to find students ready-to-work!</p>
+      </div>
+    </div>
+  </div>
+
+<!-- 
     // //function to remove username and token from
     // //local storage and sends user to login page.
     // async function logoutUser() {
@@ -94,8 +179,8 @@
     // document.getElementById('logout').addEventListener('click', logoutUser)
 
     // renderPosts()
-    // renderUsername()
-  </script>
+    // renderUsername() -->
+
 </body>
 
 </html>
