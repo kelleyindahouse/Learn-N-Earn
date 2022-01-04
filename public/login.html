@@ -61,7 +61,9 @@
   </div>
 
   <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-background-muted">
+
     <form>
+
       <div class="uk-container-expand uk-margin-top">
         <h4>Username:</h4>
         <div class="uk-inline">
@@ -69,22 +71,26 @@
           <input id="lUsername" class="uk-input uk-form-width-large" type="text">
         </div>
       </div>
+
       <div class="uk-container-expand uk-margin">
         <h4>Password:</h4>
         <div class="uk-inline">
           <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-          <input id="lPassword" class="uk-input uk-form-width-large" type="text">
+          <input id="lPassword" class="uk-input uk-form-width-large" type="password">
         </div>
       </div>
+
       <button id="login" class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-margin-top uk-margin-bottom">Login</button>
+
     </form>
+    
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   
   <script>
 
-    const loginUser = () => {
+    function loginUser() {
         let existingUser = {
           username: document.getElementById('lUsername').value,
           password: document.getElementById('lPassword').value
