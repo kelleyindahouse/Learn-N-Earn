@@ -5,94 +5,113 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="/public/css/reset.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Signup</title>
+  <link rel="stylesheet" href="/public/reset.css">
   <link rel="stylesheet" href="css/uikit.min.css" />
   <script src="js/uikit.min.js"></script>
   <script src="js/uikit-icons.js"></script>
+  <script src="uikit/dist/js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="./css/signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="container">
 
-<nav class="uk-navbar-container" uk-navbar>
-  <div class="uk-navbar-left">
-    <ul class="uk-navbar-nav">
-      <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
-      <li>
-        <a href="#">Campuses</a>
-        <div class="uk-navbar-dropdown">
-          <ul class="uk-nav uk-navbar-dropdown-nav">
-            <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="UCSB.html">UCSB</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="UCSD.html">UCSD</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a href="UCI.html">UCI</a></li>
-            <li class="uk-nav-divider"></li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="login.html">Login</a></li>
-    </ul>
+  <!-- NAVBAR-------------------------------- -->
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSB.html">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSD.html">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCI.html">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+
+  <!-- NAVBAR----------------------------------- -->
+
+  <div class="webInfo uk-flex uk-flex-center">
+    <p id="webName">Learn-n-Earn</p>
   </div>
-  <div class="uk-navbar-right">
-    <ul class="uk-navbar-nav">
-      <li>
-        <a href="#">About</a>
-        <div class="uk-navbar-dropdown">
-          <ul class="uk-nav uk-navbar-dropdown-nav">
-            <li class="uk-active"><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
+
+  <div class="webInfo uk-flex uk-flex-center">
+    <p id="webDesc">A middle ground for Employers and Students</p>
   </div>
-</nav>
-<br>
+
+  <div class="webInfo uk-flex uk-flex-center">
+    <p id="login" class='uk-link-text'>create an account or <a class="uk-link-text" href="./login.html"
+        id="loginLink">log in</a></p>
+  </div>
+
+  <div class="uk-flex uk-flex-center">
+
+    <form class='formContainer'>
 
 
-<div class="uk-container uk-container-small">
-  <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-    <div uk-scrollspy="cls:uk-animation-fade">
-      <div class="uk-card-media-left uk-card-default">
-        <div class="uk-card-media-top">
-          <form>
-              <div class="grid-container">
-                <div class="grid-padding-x">
-                  <div class="medium-6 cell">
-                    <label>username:
-                      <input type="text" placeholder="enter username" id="rUsername">
-                    </label>
-                  </div>
-                  <div class="medium-6 cell">
-                    <label>password
-                      <input type="text" placeholder="enter password" id="rPassword">
-                    </label>
-                  </div>
-                  <div class="medium-6 cell">
-                    <label>email:
-                      <input type="text" placeholder="enter email" id="rEmail">
-                    </label>
-                  </div>
-                  <div class="medium-6 cell">
-                    <label>first name:
-                      <input type="text" placeholder="enter first name" id="rFirstname">
-                    </label>
-                  </div>
-                  <div class="medium-6 cell">
-                    <label>last name:
-                      <input type="text" placeholder="enter last name" id="rLastname">
-                    </label>
-                  </div>
-                </div>
-                <button type="button" class="alert button" id="submitBtn">Submit</button>
-              </div>
-            </form>
+      <div class="formBox">
+        <p>First Name</p>
+        <input class="uk-input uk-form-width-large" type="text">
+      </div>
+
+
+      <div class="uk-margin">
+        <p>Username</p>
+        <input class="uk-input uk-form-width-large" type="text">
+      </div>
+
+
+
+      <div class="uk-inline uk-margin">
+        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+        <input class="uk-input uk-form-width-large" type="text">
+      </div>
+
+
+      <div class="uk-margin">
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: lock"></span>
+          <input class="uk-input uk-form-width-large" type="password">
+        </div>
+      </div>
+
+      <div class="uk-margin uk-margin-small-top signupPad">
+        <button class='uk-form-width-large formContainer' id="signupBtn">Create Account</button>
+      </div>
+
+
+    </form>
+
+  </div>
 
 
 
@@ -106,40 +125,33 @@
 
 
     <script>
-    async function registerUser(user) {
-        try {
-          await axios.post('/api/users/register', user)
-          return true
-  
-        } catch (err) {
-          alert('Invalid Info Provided. Please Try Again.')
+      async function registerUser(user) {
+          try {
+            await axios.post('/api/users/register', user)
+            return true
+    
+          } catch (err) {
+            alert('Invalid Info Provided. Please Try Again.')
+          }
         }
-      }
 
-    document.getElementById('submitBtn').addEventListener('click', async function (event) {
-      event.preventDefault()
+      document.getElementById('submitBtn').addEventListener('click', async function (event) {
+        event.preventDefault()
 
-      const isCreated = await registerUser({
-        username: document.getElementById('rUsername').value,
-        password: document.getElementById('rPassword').value,
-        email: document.getElementById('rEmail').value,
-        firstname: document.getElementById('rFirstname'),
-        lastname: document.getElementById('rLastname')
+        const isCreated = await registerUser({
+          username: document.getElementById('rUsername').value,
+          password: document.getElementById('rPassword').value,
+          email: document.getElementById('rEmail').value,
+          firstname: document.getElementById('rFirstname'),
+          lastname: document.getElementById('rLastname')
+        })
+
+        if (isCreated) {
+          alert('Account Created! Please Login.')
+        }
       })
-
-      if (isCreated) {
-        alert('Account Created! Please Login.')
-      }
-    })
 
     </script>
 
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
