@@ -25,3 +25,18 @@
     color: rgb(107, 176, 255);
     font-size: x-large;
 }
+
+#login{
+    font-size: medium;
+    padding-top: 50px;
+}
+
+#loginLink{
+    color: rgb(124, 124, 124);
+}
+
+#loginLink:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
