@@ -61,7 +61,7 @@
   <!-- NAVBAR----------------------------------- -->
 
   <div class="webInfo uk-flex uk-flex-center">
-    <p id="webName">Learn-n-Earn</p>
+    <p>Learn-n-Earn</p>
   </div>
 
   <div class="webInfo uk-flex uk-flex-center">
@@ -69,88 +69,80 @@
   </div>
 
   <div class="webInfo uk-flex uk-flex-center">
-    <p id="login" class='uk-link-text'>create an account or <a class="uk-link-text" href="./login.html"
+    <p id="logintext" class='uk-link-text'>Create an account or <a class="uk-link-text" href="./login.html"
         id="loginLink">log in</a></p>
   </div>
 
   <div class="uk-flex uk-flex-center">
-
     <form class='formContainer'>
 
-      <div class="formBox">
+      <div class="uk-margin">
         <p>First Name</p>
-        <input class="uk-input uk-form-width-large" type="text">
+        <input id="rFirstname" class="uk-input uk-form-width-large" type="text">
       </div>
 
+      <div class="uk-margin">
+        <p>Last Name</p>
+        <input id="rLastname" class="uk-input uk-form-width-large" type="text">
+      </div>
 
       <div class="uk-margin">
         <p>Username</p>
-        <input class="uk-input uk-form-width-large" type="text">
+        <input id="rUsername" class="uk-input uk-form-width-large" type="text">
       </div>
-
-
-
-      <div class="uk-inline uk-margin">
-        <span class="uk-form-icon" uk-icon="icon: mail"></span>
-        <input class="uk-input uk-form-width-large" type="text">
-      </div>
-
 
       <div class="uk-margin">
+        <p>Email</p>
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: mail"></span>
+          <input id="rEmail" class="uk-input uk-form-width-large" type="text">
+        </div>
+      </div>
+
+      <div class="uk-margin">
+        <p>Password</p>
         <div class="uk-inline">
           <span class="uk-form-icon" uk-icon="icon: lock"></span>
-          <input class="uk-input uk-form-width-large" type="password">
+          <input id="rPassword" class="uk-input uk-form-width-large" type="password">
         </div>
       </div>
 
       <div class="uk-margin uk-margin-small-top signupPad">
-        <button class='uk-form-width-large formContainer' id="signupBtn">Create Account</button>
+        <button class='uk-button uk-button-small uk-form-width-large formContainer' id="signupBtn">Create Account</button>
       </div>
-
 
     </form>
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-
-    <script>
-      async function registerUser(user) {
-          try {
-            await axios.post('/api/users/register', user)
-            return true
-    
-          } catch (err) {
-            alert('Invalid Info Provided. Please Try Again.')
-          }
-        }
-
-      document.getElementById('submitBtn').addEventListener('click', async function (event) {
-        event.preventDefault()
-
-        const isCreated = await registerUser({
+  <script>
+    function registerUser() {
+        let newUser = {
+          firstname: document.getElementById('rFirstname').value,
+          lastname: document.getElementById('rLastname').value,
           username: document.getElementById('rUsername').value,
-          password: document.getElementById('rPassword').value,
           email: document.getElementById('rEmail').value,
-          firstname: document.getElementById('rFirstname'),
-          lastname: document.getElementById('rLastname')
-        })
-
-        if (isCreated) {
-          alert('Account Created! Please Login.')
+          password: document.getElementById('rPassword').value
         }
+        axios.post('/api/users/register', newUser)
+          .then(res => {
+            console.log(res)
+            console.log("user created!")
+            localStorage.setItem('token', res.data.token)
+            location = '/'
+
+          })
+      }
+
+      document.getElementById('signupBtn').addEventListener('click', event => {
+        event.preventDefault()
+        registerUser()
+        console.log("success!")
       })
 
-    </script>
+  </script>
 
 </body>
 </html>
