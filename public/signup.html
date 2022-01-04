@@ -17,60 +17,90 @@
 </head>
 <body class="container">
 
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu">
-        <li class="menu-text">Learn-N-Earn</li>
+  <!-- NAVBAR-------------------------------- -->
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSB.html">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSD.html">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCI.html">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Contact</a></li>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
-  </div>
+  </nav>
+<br>
 
+<!-- NAVBAR----------------------------------- -->
 
 <div class="webInfo uk-flex uk-flex-center">
   <p id="webName">Learn-n-Earn</p>
 </div>
 
 <div class="webInfo uk-flex uk-flex-center">
-  <p id="webDesc">A meeting place for employers and students</p>
+  <p id="webDesc">A middle ground for Employers and Students</p>
 </div>
 
 
-<div class="formContainer uk-flex uk-flex-center uk-margin-large-top">
+<div class="uk-flex uk-flex-center uk-margin-large-top">
 
-  <form>
+  <form class='formContainer'>
 
 
-    <div class="uk-margin uk-margin-large-top">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="First Name">
+    <div class="uk-margin formBox">
+      <p>First Name</p>
+        <input class="uk-input uk-form-width-large" type="text">
     </div>
 
     
     <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="Last Name">
+      <p>Username</p>
+        <input class="uk-input uk-form-width-large" type="text">
     </div>
 
 
-      <div class="uk-margin">
-          <div class="uk-inline">
-              <span class="uk-form-icon" uk-icon="icon: user"></span>
+      
+          <div class="uk-inline uk-margin">
+              <span class="uk-form-icon" uk-icon="icon: mail"></span>
               <input class="uk-input uk-form-width-large" type="text">
           </div>
-      </div>
+      
   
       <div class="uk-margin">
           <div class="uk-inline">
-              <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-              <input class="uk-input uk-form-width-large" type="text">
+              <span class="uk-form-icon" uk-icon="icon: lock"></span>
+              <input class="uk-input uk-form-width-large" type="password">
           </div>
       </div>
   
+      <div class="uk-margin uk-margin-small-top">
+          <button class='uk-form-width-large formContainer' id="signupBtn">Create Account</button>
+      </div>
 
 
 </form>

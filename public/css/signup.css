@@ -1,7 +1,6 @@
 .webInfo{
     color: rgb(107, 176, 255);
     font-size:xxx-large;
-    margin-top: 30px;
     font-family: 'Acme', sans-serif;
 }
 
@@ -10,5 +9,19 @@
 }
 
 .formContainer{
-    color: blue;
+    font-size: medium;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(107, 176, 255);
+}
+
+#signupBtn{
+    border: 1px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(107, 176, 255);
+    font-size: x-large;
 }
