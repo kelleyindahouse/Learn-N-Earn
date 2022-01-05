@@ -30,6 +30,38 @@ const User = pls.defineUser(sequelize, {
   lastname: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  campus: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  yardwork: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  furniture: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  moving: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  cleaning: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  delivery: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  shopping: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  errands: {
+    type: DataTypes.STRING,
+    allowNull: true
   }
 })
 
