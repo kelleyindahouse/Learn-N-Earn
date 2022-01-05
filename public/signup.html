@@ -111,10 +111,10 @@
       <div class="uk-width-1-3@s">
         <p>Please select your campus:</p> 
         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-          <label><input class="uk-radio b-white" type="radio" name="radio2" checked> UCI</label>
-          <label><input class="uk-radio b-white" type="radio" name="radio2"> UCLA</label>
-          <label><input class="uk-radio b-white" type="radio" name="radio2"> UCSB</label>
-          <label><input class="uk-radio b-white" type="radio" name="radio2"> UCSD</label>
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCI" checked> UCI</label>
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCLA"> UCLA</label>
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCSB"> UCSB</label>
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCSD"> UCSD</label>
         </div>
       </div>
 
@@ -142,13 +142,17 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <script>
+
+    let selected = document.querySelector('input[type=radio][name=campus]:checked');
+
     function registerUser() {
         let newUser = {
           firstname: document.getElementById('rFirstname').value,
           lastname: document.getElementById('rLastname').value,
           username: document.getElementById('rUsername').value,
           email: document.getElementById('rEmail').value,
-          password: document.getElementById('rPassword').value
+          password: document.getElementById('rPassword').value,
+          campus: selected.value
         }
         axios.post('/api/users/register', newUser)
           .then(res => {
@@ -162,6 +166,7 @@
 
       document.getElementById('signupBtn').addEventListener('click', event => {
         event.preventDefault()
+        selected = document.querySelector('input[type=radio][name=campus]:checked');
         registerUser()
         console.log("success!")
       })

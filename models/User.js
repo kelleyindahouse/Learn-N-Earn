@@ -30,6 +30,10 @@ const User = pls.defineUser(sequelize, {
   lastname: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  campus: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
 })
 
