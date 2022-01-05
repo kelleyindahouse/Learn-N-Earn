@@ -50,8 +50,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://gyazo.com/da658b3b20ace8d71a02d37ef5b26170)
-
 Learn-n-Earn is a project that unifies Employers and job hungry college students in a middle ground that supplies publicity by filtering which college the student is attending, and then retrieving nearby gigs to the college town that the employers have posted. Learn-n-Earn is a platform where Employers can post job listings that would be perfect to a university student who is looking to make some extra cash without having to commit to a full time job. Some of Learn-n-Earn's filtered gig like tasks include Yard Work, Helping someone move, Hired Shopping, Furniture Assembly, Cleaning, Errands, and Delivery.
 
 Here's why:
