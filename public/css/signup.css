@@ -21,7 +21,7 @@
   
   #signupBtn {
     border: 1px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 234, 188);
     color: rgb(107, 176, 255);
     font-size: x-large;
   }
@@ -33,6 +33,7 @@
   #logintext {
     font-size: medium;
     padding-top: 20px;
+    font-family: 'Acme', sans-serif;
   }
   
   #loginLink {
@@ -48,4 +49,17 @@
   
   .b-white {
     background-color: white;
+  }
+
+.container{
+    font-family: 'Acme', sans-serif;
+}
+
+  .uk-navbar-dropdown{
+    background-color: rgb(255, 234, 188)
+  }
+
+ #headerNav{
+      color: rgb(107, 176, 255);
+      font-family: 'Acme', sans-serif;
   }
