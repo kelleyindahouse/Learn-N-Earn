@@ -1,5 +1,9 @@
 /*! UIkit 3.9.4 | https://www.getuikit.com | (c) 2014 - 2021 YOOtheme | MIT License */
-.loginHeader {
+.light-blue {
+  color: rgb(107, 176, 255);
+}
+
+.acme {
   font-family: 'Acme', sans-serif;
 }
 
