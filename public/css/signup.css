@@ -1,46 +1,51 @@
-.webInfo{
+.webInfo {
     color: rgb(107, 176, 255);
-    font-size:xxx-large;
+    font-size: xxx-large;
     font-family: 'Acme', sans-serif;
-}
-
-#webDesc{
-    font-size:xx-large;
-}
-
-.formContainer{
+  }
+  
+  #webDesc {
+    font-size: xx-large;
+  }
+  
+  .formContainer {
     font-size: medium;
     color: white;
     font-family: 'Acme', sans-serif;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
     background: rgb(107, 176, 255);
-}
-
-#signupBtn{
+  }
+  
+  #signupBtn {
     border: 1px;
     background-color: rgb(255, 255, 255);
     color: rgb(107, 176, 255);
     font-size: x-large;
-}
-
-.signupPad{
+  }
+  
+  .signupPad {
     padding-top: 20px;
-}
-
-#login{
+  }
+  
+  #logintext {
     font-size: medium;
-    padding-top: 50px;
-}
-
-#loginLink{
-    color: rgb(124, 124, 124);
-}
-
-#loginLink:hover {
+    padding-top: 20px;
+  }
+  
+  #loginLink {
+    padding-left: 1px;
+    padding-top: 2px;
+    /* color: rgb(124, 124, 124); */
+  }
+  
+  #loginLink:hover {
     color: red;
     background-color: transparent;
-    text-decoration: underline;
+  }
+  
+  .b-white {
+    background-color: white;
   }
