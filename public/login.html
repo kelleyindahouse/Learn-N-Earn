@@ -67,7 +67,7 @@
     </h5>
   </div>
 
-  <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-background-muted">
+  <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-box-shadow-bottom uk-background-muted">
 
     <form>
 
@@ -75,7 +75,7 @@
         <h4 class="acme">Username:</h4>
         <div class="uk-inline">
           <span class="uk-form-icon" uk-icon="icon: user"></span>
-          <input id="lUsername" class="uk-input uk-form-width-large" type="text">
+          <input id="lUsername" class="uk-input uk-form-width-large uk-box-shadow-hover-medium" type="text">
         </div>
       </div>
 
@@ -83,11 +83,13 @@
         <h4 class="acme">Password:</h4>
         <div class="uk-inline">
           <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-          <input id="lPassword" class="uk-input uk-form-width-large" type="password">
+          <input id="lPassword" class="uk-input uk-form-width-large uk-box-shadow-hover-medium" type="password">
         </div>
       </div>
 
-      <button id="login" class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-margin-top uk-margin-bottom">Login</button>
+      <div class="uk-margin-bottom">
+        <button id="login" class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-text-capitalize">Login</button>
+      </div>
 
     </form>
     
