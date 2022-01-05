@@ -41,10 +41,11 @@
         <li><a href="login.html">Login</a></li>
       </ul>
     </div>
+
     <div class="uk-navbar-right">
       <ul class="uk-navbar-nav">
         <li>
-          <a href="#">About</a>
+          <a class="uk-margin-right" href="#">About</a>
           <div class="uk-navbar-dropdown">
             <ul class="uk-nav uk-navbar-dropdown-nav">
               <li class="uk-active"><a href="about.html">About Us</a></li>
@@ -57,7 +58,13 @@
   </nav>
 
   <div class="formContainer uk-container-expand uk-margin-large-top uk-flex uk-flex-center">
-    <h1 class="loginHeader">Login</h1>
+    <h1 class="light-blue acme">Login</h1>
+  </div>
+
+  <div class="uk-flex uk-flex-center">
+    <h5 class="light-blue acme uk-text-center">Not a user yet?<br>
+    <a class="uk-button uk-button-text uk-text-capitalize" href="./signup.html"><b>Register here!</b></a>
+    </h5>
   </div>
 
   <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-background-muted">
@@ -65,7 +72,7 @@
     <form>
 
       <div class="uk-container-expand uk-margin-top">
-        <h4>Username:</h4>
+        <h4 class="acme">Username:</h4>
         <div class="uk-inline">
           <span class="uk-form-icon" uk-icon="icon: user"></span>
           <input id="lUsername" class="uk-input uk-form-width-large" type="text">
@@ -73,7 +80,7 @@
       </div>
 
       <div class="uk-container-expand uk-margin">
-        <h4>Password:</h4>
+        <h4 class="acme">Password:</h4>
         <div class="uk-inline">
           <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
           <input id="lPassword" class="uk-input uk-form-width-large" type="password">
