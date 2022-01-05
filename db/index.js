@@ -4,5 +4,5 @@ module.exports = new Sequelize(process.env.NODE_ENV === 'production' ? process.e
 
 // const sequelize = new Sequelize('mysql://root:rootroot@localhost:3306/learnearn_db')
 
-// module.exports = sequelize
+module.exports = sequelize
 
