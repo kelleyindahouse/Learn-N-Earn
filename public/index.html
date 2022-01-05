@@ -5,7 +5,7 @@
   <title>Learn-n-Earn</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/uikit.min.css" />
+  <link rel="stylesheet" href="css/uikit.min.css">
   <script src="js/uikit.min.js"></script>
   <script src="js/uikit-icons.js"></script>
 </head>
@@ -39,7 +39,7 @@
     <div class="uk-navbar-right">
       <ul class="uk-navbar-nav">
         <li>
-          <a href="#">About</a>
+          <a class="uk-margin-right" href="#">About</a>
           <div class="uk-navbar-dropdown">
             <ul class="uk-nav uk-navbar-dropdown-nav">
               <li class="uk-active"><a href="about.html">About Us</a></li>
@@ -52,7 +52,7 @@
   </nav>
 <br>
   <!-- campus logo nav  -->
-
+<div class="uk-container uk-container-small">
   <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div uk-scrollspy="cls:uk-animation-fade">
       <div class="uk-card-media-left uk-card-default">
@@ -63,28 +63,28 @@
                 <img src="images/uci.jpg" alt="" uk-cover>
                 <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
                   <h3 class="uk-margin-remove">UCI</h3>
-                  <p class="uk-margin-remove">Find students @UCI!</p>
+                  <p class="uk-margin-remove"><a href="UCI.html">Find students @UCI!</p></a>
                 </div>
               </li>
               <li>
                 <img src="images/ucla.jpg" alt="" uk-cover>
                 <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
                   <h3 class="uk-margin-remove">UCLA</h3>
-                  <p class="uk-margin-remove">Find students @UCLA!</p>
+                  <p class="uk-margin-remove"><a href="UCLA.html">Find students @UCLA!</p></a>
                 </div>
               </li>
               <li>
                 <img src="images/ucsb.jpg" alt="" uk-cover>
                 <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
                   <h3 class="uk-margin-remove">UCSB</h3>
-                  <p class="uk-margin-remove">Find students @UCSB!</p>
+                  <p class="uk-margin-remove"><a href="UCSB.html">Find students @UCSB!</p></a>
                 </div>
               </li>
               <li>
                 <img src="images/ucsd.jpg" alt="" uk-cover>
                 <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
                   <h3 class="uk-margin-remove">UCSD</h3>
-                  <p class="uk-margin-remove">Find students @UCSD!</p>
+                  <p class="uk-margin-remove"><a href="UCSD.html">Find students @UCSD!</p></a>
                 </div>
               </li>
             </ul>
@@ -100,21 +100,20 @@
           <h3 class="uk-card-title">Need some help? Select a campus</h3>
           <p>Choose the campus in your area to find students ready-to-work!</p>
         </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card uk-card-secondary">
-        <div class="uk-card-body">
-          <h3 class="uk-card-title">Need to find work?</h3>
-          <p>Register with us and start finding work today</p>
-        </div>
-        <div class="uk-card-media-bottom">
-          <img src="images/lawnmow.png">
-        </div>
     </div>
   </div>
 </div>
-
+<br><br>
+<!-- registration card -->
+<div class="uk-text-bold">
+  <div class="uk-container uk-container-small">
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+      <div uk-scrollspy="cls:uk-animation-fade">
+        <h3>Need to find work? <a href="signup.html" button class="uk-button uk-button-primary">Register</a> with us today.</h3>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- 
     // //function to remove username and token from

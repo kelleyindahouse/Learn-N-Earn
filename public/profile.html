@@ -1,20 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/public/reset.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
-    crossorigin="anonymous">
+  <title>Learn-n-Earn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.js"></script>
 </head>
 
 <body>
+
+  <!-- navbar -->
+
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSB.html">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSD.html">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCI.html">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
   
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
     crossorigin="anonymous"></script>
   
     <script>

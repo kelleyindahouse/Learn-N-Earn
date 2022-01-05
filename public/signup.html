@@ -1,96 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" href="/public/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="/public/reset.css">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.js"></script>
+  <script src="uikit/dist/js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="./css/signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-
-
-    <form>
-        <div class="grid-container">
-          <div class="grid-padding-x">
-            <div class="medium-6 cell">
-              <label>username:
-                <input type="text" placeholder="enter username" id="rUsername">
-              </label>
-            </div>
-            <div class="medium-6 cell">
-              <label>password
-                <input type="text" placeholder="enter password" id="rPassword">
-              </label>
-            </div>
-            <div class="medium-6 cell">
-              <label>email:
-                <input type="text" placeholder="enter email" id="rEmail">
-              </label>
-            </div>
-            <div class="medium-6 cell">
-              <label>first name:
-                <input type="text" placeholder="enter first name" id="rFirstname">
-              </label>
-            </div>
-            <div class="medium-6 cell">
-              <label>last name:
-                <input type="text" placeholder="enter last name" id="rLastname">
-              </label>
-            </div>
+  <!-- NAVBAR-------------------------------- -->
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSB.html">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSD.html">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCI.html">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
           </div>
-          <button type="button" class="alert button" id="submitBtn">Submit</button>
+        </li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a class="uk-margin-right" href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+
+  <!-- NAVBAR----------------------------------- -->
+
+  <div class="webInfo uk-flex uk-flex-center">
+    <p>Learn-n-Earn</p>
+  </div>
+
+  <div class="webInfo uk-flex uk-flex-center">
+    <p id="webDesc">A middle ground for Employers and Students</p>
+  </div>
+
+  <div class="uk-container uk-margin-bottom uk-flex uk-flex-center uk-animation-toggle">
+    <p id="logintext" class="light-blue acme ">Create an account or 
+    <a class="uk-button uk-button-text uk-text-top uk-text-capitalize uk-animation-shake" href="./login.html" id="loginLink">Login</a>
+    </p>
+  </div>
+
+  <div class="uk-container uk-flex-center">
+    <form class="formContainer uk-grid-medium" uk-grid>
+
+      <div class="uk-width-1-3@s">
+        <p>First Name:</p>
+        <input id="rFirstname" class="uk-input uk-box-shadow-hover-large" type="text">
+      </div>
+
+      <div class="uk-width-1-3@s">
+        <p>Last Name:</p>
+        <input id="rLastname" class="uk-input uk-box-shadow-hover-large" type="text">
+      </div>
+
+      <div class="uk-width-1-3@s">
+        <p>Username:</p>
+        <input id="rUsername" class="uk-input uk-box-shadow-hover-large" type="text">
+      </div>
+
+      <div class="uk-width-1-2@s">
+        <p>Email:</p>
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon" uk-icon="icon: mail"></span>
+          <input id="rEmail" class="uk-input uk-box-shadow-hover-large" type="text">
         </div>
-      </form>
+      </div>
 
+      <div class="uk-width-1-2@s">
+        <p>Password:</p>
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon" uk-icon="icon: lock"></span>
+          <input id="rPassword" class="uk-input uk-box-shadow-hover-large" type="password">
+        </div>
+      </div>
 
+      <div class="uk-width-1-3@s">
+        <p>Please select your campus:</p> 
+        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+          <label><input class="uk-radio b-white" type="radio" name="radio2" checked> UCI</label>
+          <label><input class="uk-radio b-white" type="radio" name="radio2"> UCLA</label>
+          <label><input class="uk-radio b-white" type="radio" name="radio2"> UCSB</label>
+          <label><input class="uk-radio b-white" type="radio" name="radio2"> UCSD</label>
+        </div>
+      </div>
 
+      <div class="uk-width-1-3@s">
+        <p>Please select all tasks you are available for:</p>
+        <div class="uk-grid-small uk-grid">
+          <label><input class="uk-checkbox b-white" type="checkbox"> Yard Work</label>
+          <label><input class="uk-checkbox b-white" type="checkbox"> Furniture Assembly</label>
+          <label><input class="uk-checkbox b-white" type="checkbox"> Help Moving</label>
+          <label><input class="uk-checkbox b-white" type="checkbox"> Cleaning</label>
+          <label><input class="uk-checkbox b-white" type="checkbox"> Delivery</label>
+          <label><input class="uk-checkbox b-white" type="checkbox"> Shopping</label>
+          <label><input class="uk-checkbox b-white" type="checkbox"> Errands</label>
+        </div>
+      </div>
 
+      <div class="uk-flex uk-flex-center signupPad uk-width-1-3@s">
+        <button class="uk-button uk-button-large uk-text-capitalize uk-box-shadow-hover-large" id="signupBtn">Create Account</button>
+      </div>
 
+    </form>
 
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-
-    <script>
-    async function registerUser(user) {
-        try {
-          await axios.post('/api/users/register', user)
-          return true
-  
-        } catch (err) {
-          alert('Invalid Info Provided. Please Try Again.')
+  <script>
+    function registerUser() {
+        let newUser = {
+          firstname: document.getElementById('rFirstname').value,
+          lastname: document.getElementById('rLastname').value,
+          username: document.getElementById('rUsername').value,
+          email: document.getElementById('rEmail').value,
+          password: document.getElementById('rPassword').value
         }
+        axios.post('/api/users/register', newUser)
+          .then(res => {
+            console.log(res)
+            console.log("user created!")
+            localStorage.setItem('token', res.data.token)
+            location = '/'
+
+          })
       }
 
-    document.getElementById('submitBtn').addEventListener('click', async function (event) {
-      event.preventDefault()
-
-      const isCreated = await registerUser({
-        username: document.getElementById('rUsername').value,
-        password: document.getElementById('rPassword').value,
-        email: document.getElementById('rEmail').value,
-        firstname: document.getElementById('rFirstname'),
-        lastname: document.getElementById('rLastname')
+      document.getElementById('signupBtn').addEventListener('click', event => {
+        event.preventDefault()
+        registerUser()
+        console.log("success!")
       })
 
-      if (isCreated) {
-        alert('Account Created! Please Login.')
-      }
-    })
+  </script>
 
-    </script>
-
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
