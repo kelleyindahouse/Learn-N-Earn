@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://gyazo.com/da658b3b20ace8d71a02d37ef5b26170)
 
 Learn-n-Earn is a project that unifies Employers and job hungry college students in a middle ground that supplies publicity by filtering which college the student is attending, and then retrieving nearby gigs to the college town that the employers have posted. Learn-n-Earn is a platform where Employers can post job listings that would be perfect to a university student who is looking to make some extra cash without having to commit to a full time job. Some of Learn-n-Earn's filtered gig like tasks include Yard Work, Helping someone move, Hired Shopping, Furniture Assembly, Cleaning, Errands, and Delivery.
 
@@ -150,14 +150,3 @@ Logan Barajas: [Github](https://github.com/Loganuwu) [LinkedIn](https://www.link
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/badge/Contributors-5-brightgreen
 [contributors-url]: https://github.com/kelleyindahouse/Learn-N-Earn/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/logo.jpg
