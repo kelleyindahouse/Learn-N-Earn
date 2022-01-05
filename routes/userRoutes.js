@@ -4,7 +4,7 @@ const passport = require('passport')
 const jwt = require('jsonwebtoken')
 
 router.post('/users/register', (req, res) => {
-  User.register(new User({ username: req.body.username, email: req.body.email, firstname: req.body.firstname, lastname: req.body.lastname, campus: req.body.campus }), req.body.password, err => {
+  User.register(new User({ username: req.body.username, email: req.body.email, firstname: req.body.firstname, lastname: req.body.lastname, campus: req.body.campus, yardwork: req.body.yardwork, furniture: req.body.furniture, moving: req.body.moving, cleaning: req.body.cleaning, delivery: req.body.delivery, shopping: req.body.shopping, errands: req.body.errands }), req.body.password, err => {
     if (err) { console.log(err) }
     res.sendStatus(200)
   })
