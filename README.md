@@ -144,6 +144,8 @@ Tim Bassignana: [Github](https://github.com/wearehavingfun)
 
 Johnny Chavando: [Github](https://github.com/Shavv97)
 
+Ricky Badillo:
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
