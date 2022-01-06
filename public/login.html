@@ -18,29 +18,37 @@
   
   <!-- navbar -->
   
-  <nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
-      <ul class="uk-navbar-nav">
-        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+  <header>
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        </ul>
+        <ul class="uk-navbar-nav uk-visible@s">
+          <li><a href="posts.html">Job Posts</a></li>
+          <li class="uk-active"><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@s">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+      </div>
+    </nav>
+  </header>
+  
+  <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
         <li><a href="posts.html">Job Posts</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
     </div>
-
-    <div class="uk-navbar-right">
-      <ul class="uk-navbar-nav">
-        <li>
-          <a class="uk-margin-right" href="#">About</a>
-          <div class="uk-navbar-dropdown">
-            <ul class="uk-nav uk-navbar-dropdown-nav">
-              <li class="uk-active"><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  </div>
 
   <div class="formContainer uk-container-expand uk-margin-large-top uk-flex uk-flex-center">
     <h1 class="light-blue acme">Login</h1>
@@ -52,7 +60,7 @@
     </h5>
   </div>
 
-  <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-box-shadow-bottom uk-background-muted">
+  <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-box-shadow-bottom uk-background-muted" uk-scrollspy="cls:uk-animation-fade">
 
     <form>
 
