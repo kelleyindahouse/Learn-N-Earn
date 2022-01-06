@@ -33,6 +33,7 @@
             </ul>
           </div>
         </li>
+        <li><a href="posts.html">Job Posts</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
     </div>
@@ -100,6 +101,7 @@
             <h3 class="uk-card-title">Need some help? Select a campus</h3>
             <p>Choose the campus in your area to find students ready-to-work!</p>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -115,34 +117,5 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-  <script>
-    //function to retrieve posts from database
-      async function getPosts () {
-        try {
-          const posts = await axios.get('/api/posts', {
-            headers: {
-              'Authorization': `Bearer ${localStorage.getItem('token')}`
-            }
-          })
-          return posts
-
-        } catch (err) {
-          location = '/login.html'
-        }
-      }
-
-      //function to render posts onto page
-      async function renderPosts () {
-        const posts = await getPosts()
-
-        console.log(posts)
-      }
-
-      renderPosts()
-  </script>
-
 </body>
-
 </html>
