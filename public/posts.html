@@ -154,7 +154,7 @@
         body: document.getElementById('body').value
       })
 
-      renderPost({ ...post, User: { username: localStorage.getItem('username') } })
+      renderPost()
 
       document.getElementById('title').value = ''
       document.getElementById('body').value = ''
