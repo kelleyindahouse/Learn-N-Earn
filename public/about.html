@@ -26,10 +26,11 @@
         </ul>
       </div>
       <div class="uk-navbar-right">
+        <a id="logout" class="uk-icon-button uk-button-primary" uk-tooltip="Logout" uk-icon="icon: sign-out"></a>
         <ul class="uk-navbar-nav uk-visible@s">
           <li class="uk-active"><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
         </ul>
+
         <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
       </div>
     </nav>
@@ -39,7 +40,6 @@
     <div class="uk-offcanvas-bar">
       <ul class="uk-nav">
         <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
         <li><a href="posts.html">Job Posts</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
@@ -83,7 +83,7 @@
               <li>
                 <img data-src="images/ricky.jpg" width="" height="" alt="" uk-img>
                 <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                  <h3 class="uk-margin-remove">Ricky</h3>
+                  <h3 class="uk-margin-remove">Ricardo Badillo</h3>
                   <p class="uk-margin-remove">Brb. Gotta stream.</p>
                 </div>
               </li>
@@ -98,7 +98,14 @@
     </div>
   </div>
   
+  <script>
+    async function logoutUser() {
+        localStorage.removeItem('token')
+        location = '/login.html'
+    }
 
+    document.getElementById('logout').addEventListener('click', logoutUser)
+  </script>
 
 </body>
 

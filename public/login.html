@@ -32,7 +32,6 @@
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav uk-visible@s">
           <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
       </div>
@@ -43,7 +42,6 @@
     <div class="uk-offcanvas-bar">
       <ul class="uk-nav">
         <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
         <li><a href="posts.html">Job Posts</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
@@ -94,8 +92,8 @@
 
     async function loginUser (user) {
       try {
-        const { data} = await axios.post('/api/users/login', user)
-        return data
+        const { data: token } = await axios.post('/api/users/login', user)
+        return token
       } catch (err) {
         alert("can't do it. try again.")
       }
@@ -104,13 +102,12 @@
     document.getElementById('login').addEventListener('click', async function (event) {
       event.preventDefault()
 
-      const { username, token } = await loginUser({
+      const token = await loginUser({
         username: document.getElementById('lUsername').value,
         password: document.getElementById('lPassword').value
       })
       
       if (token) {
-        localStorage.setItem('username', username)
         localStorage.setItem('token', token)
         location = '/'
       } else {
