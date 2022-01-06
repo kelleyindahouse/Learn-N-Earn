@@ -109,7 +109,7 @@ Students start off by creating and registering your unique account on the sign u
 
 Use this tutorial video as reference to usage on the website and navigating through the front end interfaces.
 
-_For more examples, please refer to the [Tutorial Video](https://example.com)_
+_For more examples, please refer to the [Tutorial Video](https://www.youtube.com/watch?v=ezsmZ469N1M&ab_channel=LoganUwU)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
