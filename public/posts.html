@@ -33,6 +33,7 @@
             </ul>
           </div>
         </li>
+        <li><a href="posts.html">Job Posts</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
     </div>
@@ -56,6 +57,31 @@
     
   </div>
   
+  <div class="uk-container uk-container-small uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-box-shadow-bottom uk-background-muted">
+  
+    <form>
+
+      <fieldset class="uk-fieldset uk-margin-top">
+
+        <legend class="uk-legend">Post a listing!</legend>
+
+        <div class="uk-margin-top">
+          <input id="title" class="uk-input uk-form-width-large uk-box-shadow-hover-medium" type="text" placeholder="Title">
+        </div>
+        
+        <div class="uk-margin">
+          <textarea id="body" class="uk-textarea uk-box-shadow-hover-medium" rows="5" placeholder="Body"></textarea>
+        </div>
+        
+        <div class="uk-margin-bottom">
+          <button id="post"
+          class="uk-button uk-button-primary uk-button-large uk-width-auto uk-text-capitalize">post</button>
+        </div>
+        
+      </fieldset>
+
+    </form>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   
   <script>
@@ -74,16 +100,19 @@
       }
     }
 
-    //function to render posts onto page
-    async function renderPosts() {
-      const posts = await getPosts()
+    async function createPost (listing) {
+      const { data: post } = await axios.post('/api/posts', listing, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      })
+      return post
+    }
 
-      console.log(posts)
-
-      posts.forEach(({ title, body, createdAt, User: { username } }) => {
-        const postElem = document.createElement('div')
-        postElem.classList.add("uk-width-1-2@m", "uk-width-1-1@s")
-        postElem.innerHTML = `
+    async function renderPost ({ title, body, createdAt, User: { username } }) {
+      const postElem = document.createElement('div')
+      postElem.classList.add("uk-width-1-2@m", "uk-width-1-1@s")
+      postElem.innerHTML = `
         <div class="uk-card uk-card-hover uk-card-default ">
           <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -105,9 +134,32 @@
           </div>
         </div>
         `
-        document.getElementById('posts').append(postElem)
-      })
+      document.getElementById('posts').prepend(postElem)
     }
+
+    //function to render posts onto page
+    async function renderPosts() {
+      const posts = await getPosts()
+
+      console.log(posts)
+
+      posts.forEach(post => renderPost(post))       
+    }
+
+    document.getElementById('post').addEventListener('click', async function (event) {
+      event.preventDefault()
+
+      const post = await createPost({
+        title: document.getElementById('title').value,
+        body: document.getElementById('body').value
+      })
+
+      renderPost({ ...post, User: { username: localStorage.getItem('username') } })
+
+      document.getElementById('title').value = ''
+      document.getElementById('body').value = ''
+
+    })
 
     renderPosts()
 

@@ -37,6 +37,7 @@
             </ul>
           </div>
         </li>
+        <li><a href="posts.html">Job Posts</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
     </div>
@@ -100,8 +101,8 @@
 
     async function loginUser (user) {
       try {
-        const { data: token } = await axios.post('/api/users/login', user)
-        return token
+        const { data} = await axios.post('/api/users/login', user)
+        return data
       } catch (err) {
         alert("can't do it. try again.")
       }
@@ -110,12 +111,13 @@
     document.getElementById('login').addEventListener('click', async function (event) {
       event.preventDefault()
 
-      const token = await loginUser({
+      const { username, token } = await loginUser({
         username: document.getElementById('lUsername').value,
         password: document.getElementById('lPassword').value
       })
       
       if (token) {
+        localStorage.setItem('username', username)
         localStorage.setItem('token', token)
         location = '/'
       } else {

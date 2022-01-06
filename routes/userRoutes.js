@@ -14,7 +14,10 @@ router.post('/users/login', (req, res) => {
   User.authenticate()(req.body.username, req.body.password, (err, user) => {
     if (err) { console.log(err) }
 
-    res.json(user ? jwt.sign({ id: user.id }, process.env.SECRET) : null)
+    res.json(user ? {
+      username: user.username,
+      token: jwt.sign({ id: user.id }, process.env.SECRET)
+    } : null)
   })
 })
 
