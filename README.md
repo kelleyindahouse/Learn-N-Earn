@@ -16,10 +16,10 @@
   <p align="center">
     A middle ground for Employers and Students
     <br />
-    <a href="https://learn-n-earn.herokuapp.com/"><strong></strong></a>
+    <a href="https://learnnearn.herokuapp.com/"><strong></strong></a>
     <br />
     <br />
-    <a href="https://learn-n-earn.herokuapp.com/">View Demo</a>
+    <a href="https://learnnearn.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/kelleyindahouse/Learn-N-Earn/issues">Report Bug</a>
 
@@ -137,6 +137,12 @@ See the [open issues](https://github.com/kelleyindahouse/Learn-N-Earn/issues) fo
 Project Link: [https://github.com/kelleyindahouse/Learn-N-Earn](https://github.com/kelleyindahouse/Learn-N-Earn)
 
 Logan Barajas: [Github](https://github.com/Loganuwu) [LinkedIn](https://www.linkedin.com/in/logan-barajas-80666518b/)
+
+Kevin Kelley: [Github](https://github.com/kelleyindahouse)
+
+Tim Bassignana: [Github](https://github.com/wearehavingfun)
+
+Johnny Chavando: [Github](https://github.com/Shavv97)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
